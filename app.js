@@ -3,6 +3,7 @@
 import './auth/user.js';
 
 /* Get DOM Elements */
+const errorDisplay = document.getElementById('error-display');
 
 /* State */
 

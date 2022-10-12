@@ -12,7 +12,7 @@
 
         <!-- js -->
         <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-        <script type="module" src="app.js"></script>
+        <script type="module" src="post-editor.js"></script>
 
         <!-- fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,25 +25,32 @@
         <!-- css -->
         <link rel="stylesheet" href="/styles/reset.css" />
         <link rel="stylesheet" href="/styles/global.css" />
-        <link rel="stylesheet" href="/styles/bb.css" />
+        <link rel="stylesheet" href="/styles/post.css" />
     </head>
 
     <body>
         <header class="page-header">
             <img class="logo" src="/assets/html_css_js.png" alt="logo" />
-            <p class="title">Bulletin Board</p>
+            <p class="title">Write Your Post!</p>
             <nav>
                 <a href="/">Home</a>
-                <a href="/post-editor/index.html">Post</a>
+
                 <a id="sign-out-link" href="auth">Sign Out</a>
             </nav>
         </header>
 
         <main>
-            <ul id="post-list">
-                <li></li>
-            </ul>
-            <p id="error-display"></p>
+            <form id="post-form">
+                <label>Title<input id="post-title" placeholder="title of your post"> </input></label>
+                <label>Content<textarea id="post-content" placeholder="content of your post"> </textarea></label>
+                <label>Contact<input id="post-contact" placeholder="how to reach you"> </input></label>
+                <label>Category<selection id="post-category" placeholder="choose a category"> </selection></label>
+
+
+
+                <button id="post-submit-button">Submit</button>
+                <p id="error-display"></p>
+            </form>
         </main>
     </body>
 </html>
