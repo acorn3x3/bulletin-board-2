@@ -1,10 +1,10 @@
 /* imports */
 
-import { createPost } from '../fetch-utils';
+import { createPost } from '../fetch-utils.js';
 
-const postForm = document.getElementsById('post-form');
-const errorDisplay = document.getElementsById('error-display');
-const postSubmitButton = document.getElementsById('post-submit-button');
+const postForm = document.getElementById('post-form');
+const errorDisplay = document.getElementById('error-display');
+const postSubmitButton = document.getElementById('post-submit-button');
 
 let error = null;
 
@@ -15,7 +15,7 @@ postForm.addEventListener('submit', async (e) => {
     const post = {
         category: formData.get('category'),
         title: formData.get('title'),
-        description: formData.get('description'),
+        content: formData.get('content'),
         contact: formData.get('contact'),
     };
 
