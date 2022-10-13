@@ -13,10 +13,10 @@ postForm.addEventListener('submit', async (e) => {
 
     const formData = new FormData(postForm);
     const post = {
-        category: formData.get('category'),
-        title: formData.get('title'),
-        content: formData.get('content'),
-        contact: formData.get('contact'),
+        category: formData.get('post-category'),
+        title: formData.get('post-title'),
+        content: formData.get('post-content'),
+        contact: formData.get('post-contact'),
     };
 
     const response = await createPost(post);
