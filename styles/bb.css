@@ -5,7 +5,7 @@ main {
     text-align: center;
 }
 li {
-    background-color: aqua;
+    background-color: rgb(113, 153, 153);
     border: solid;
-    border-color: red;
+    border-color: rgb(0, 0, 0);
 }
