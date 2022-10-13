@@ -33,4 +33,8 @@ export async function createPost(post) {
     return await client.from('posts').insert(post).single();
 }
 
-export async function getPosts() {}
+export async function getPosts() {
+    let query = client.from('posts').select('*').order('created_at').limit(200);
+
+    return await query;
+}
